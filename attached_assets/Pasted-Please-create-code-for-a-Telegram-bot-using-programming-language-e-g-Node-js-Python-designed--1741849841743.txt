@@ -1,0 +1,45 @@
+Please create code for a Telegram bot using [programming language -  Node.js] designed to **sell VPN subscriptions**.
+
+The **absolute primary requirement** for this bot is **rock-solid stability and continuous activity after deployment as a VPN sales bot**.  It is paramount that this bot is designed to **never become inactive**, operate **reliably 24/7**, and handle user interactions smoothly in a production environment.
+
+Therefore, the generated code must **first and foremost** prioritize the following aspects, specifically within the context of a VPN sales bot:
+
+1.  **Robust Error Handling (Crucial for Sales Transactions):** Implement comprehensive error handling that is tailored to the potential errors within a sales bot. This includes:
+    *   Handling API errors during Telegram interactions.
+    *   Managing potential errors during *simulated* payment processes or order recording (even if a real payment gateway isn't integrated yet for this stability-focused version).
+    *   Database connection errors (if a lightweight data storage mechanism is used for order placeholders in this version - though database integration can be simplified for initial stability testing if needed).
+    *   Unexpected user inputs or interactions.
+    The bot must gracefully recover from these errors, log them in detail for debugging, and continue serving users without crashing or becoming unresponsive, ensuring no potential sales are lost due to bot inactivity.
+
+2.  **Clean and Efficient Code (For Reliable Sales Operations):** Follow extremely clean and efficient coding practices, recognizing that this bot will be handling user requests and potentially sensitive order information. The code needs to be:
+    *   Well-structured and modular for easy maintenance and updates.
+    *   Highly readable and understandable to facilitate debugging and future enhancements.
+    *   Optimized for performance to handle concurrent user requests without slowdowns or resource exhaustion, ensuring a smooth sales experience even during peak times.
+
+3.  **Deployment Considerations for 24/7 Uptime (Sales Continuity):**  Incorporate design elements specifically aimed at guaranteeing continuous uptime, essential for a sales bot:
+    *   **Asynchronous Operations:**  Heavily utilize asynchronous programming to prevent blocking operations and maintain responsiveness, crucial for handling multiple customer interactions concurrently.
+    *   **Efficient Resource Management:**  Be extremely mindful of resource consumption (CPU, memory). Design the bot to be lightweight and resource-efficient to prevent performance degradation or crashes over extended periods, ensuring uninterrupted sales operations.
+    *   **Basic Health Check (Highly Recommended for Sales Monitoring):** Implement a simple health check mechanism (e.g., an endpoint or internal function) to monitor the bot's operational status and detect any inactivity or errors immediately. This is vital for a sales bot so you are alerted to any downtime that could impact sales.
+
+4.  **Clear and Detailed Logging (For Sales and Issue Tracking):** Implement verbose logging that is specifically useful for monitoring sales activity and diagnosing issues in a sales context. Logs should include:
+    *   User interactions (commands, button presses).
+    *   Order placements (even if simulated in this version).
+    *   Payment confirmations (even if simulated).
+    *   Any errors encountered and their context.
+    Detailed logs are critical for tracking sales funnels, identifying potential bottlenecks in the user journey, and quickly resolving any issues that could affect sales or bot uptime.
+
+**Specifically, for this initial STABILITY-FOCUSED version, the AI should generate code that minimally implements the following *basic VPN sales bot functionalities* to demonstrate robustness in a sales context (do NOT focus on fully functional sales features yet):**
+
+*   **`/start` command:**  A basic welcome message introducing the VPN service.
+*   **`/plans` command:**  Display a *simple, hardcoded list* of 2-3 VPN plan names and prices (no need for dynamic data or database integration for this stability version).  Present these plans in a way that a user *could* theoretically select one (e.g., using inline keyboard buttons, but the button actions don't need to do anything complex yet).
+*   **Plan "Selection" Handling (Placeholder):**  If a user "selects" a plan from `/plans`, the bot should just log a message indicating which plan was "selected" and by whom. No actual order processing or payment is needed in this initial version.
+*   **Simulated Payment Confirmation (Basic):**  Implement a simple command like `/paid` that a user can send after *pretending* to pay.  When `/paid` is received, the bot should just log this event, indicating a "simulated payment confirmation" from the user.
+*   **Admin "Order Completion" (Basic):** Include a *very basic* admin command (e.g., accessible only to the ADMIN_TELEGRAM_ID) like `/completeorder USER_ID` that, when used, simply logs a message indicating that the order for USER_ID has been "completed" by the admin.
+
+**The output must be deployment-ready and meticulously designed to prevent bot inactivity and ensure long-term stability for a *VPN sales bot* scenario, even if the sales functionalities are extremely basic in this initial iteration.**
+
+**Again, do not prioritize fully functional sales features at this stage. The overriding priority is a *minimal yet exceptionally robust and stable VPN sales bot skeleton* that is designed for continuous 24/7 operation.**
+
+Please provide the code, and *thoroughly explain* all the mechanisms (error handling, code structure, deployment considerations, logging) implemented to guarantee the VPN sales bot's stability, reliability, and continuous activity in a deployed, production-like environment, focusing on how these mechanisms are tailored to a *sales bot context*.
+
+This revised prompt is much more specific and provides the necessary context for the AI to generate code that is not only stable in a general sense but also robust and reliable in the specific context of a VPN sales bot. By focusing on minimal sales functionalities in this initial stage, we keep the complexity manageable while still ensuring the AI addresses the critical aspect of 24/7 uptime and stability within the sales bot domain.
